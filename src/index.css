@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 20%;
 
-    --primary: 150 15% 70%;
+    --primary: 150 45% 55%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 96%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 50%;
 
-    --accent: 150 20% 95%;
+    --accent: 150 40% 92%;
     --accent-foreground: 0 0% 25%;
 
     --destructive: 0 70% 55%;
@@ -34,10 +34,10 @@ All colors MUST be HSL.
 
     --border: 0 0% 92%;
     --input: 0 0% 92%;
-    --ring: 150 15% 70%;
+    --ring: 150 45% 55%;
 
     --radius: 0.5rem;
-    
+
     --hero-gradient: linear-gradient(135deg, hsl(150 10% 85% / 0.3), hsl(0 0% 95% / 0.2));
     --overlay-gradient: linear-gradient(180deg, transparent 0%, hsl(0 0% 0% / 0.4) 100%);
     --soft-shadow: 0 2px 8px hsl(0 0% 0% / 0.04);
@@ -108,7 +108,7 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
@@ -118,15 +118,15 @@ All colors MUST be HSL.
   .smooth-hover {
     @apply transition-all duration-400 ease-out;
   }
-  
+
   .hover-lift {
     @apply hover:scale-105 hover:shadow-xl transition-all duration-400;
   }
-  
+
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .uppercase-label {
     @apply uppercase tracking-wider text-xs font-normal;
   }

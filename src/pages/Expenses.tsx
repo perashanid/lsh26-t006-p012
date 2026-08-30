@@ -42,7 +42,7 @@ const Expenses = () => {
     },
   });
 
-  const sortedExpenses = [...expenses].sort((a, b) => 
+  const sortedExpenses = [...expenses].sort((a, b) =>
     new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
@@ -50,7 +50,7 @@ const Expenses = () => {
     return (
       <div className="min-h-screen bg-gray-50">
         <Navigation />
-        <div className="container mx-auto px-4 py-16">
+        <div className="container mx-auto px-4 py-16 pt-24">
           <div className="text-center">Loading expenses...</div>
         </div>
         <Footer />
@@ -61,8 +61,8 @@ const Expenses = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
-      
-      <div className="container mx-auto px-4 py-8">
+
+      <div className="container mx-auto px-4 py-8 pt-24">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div>

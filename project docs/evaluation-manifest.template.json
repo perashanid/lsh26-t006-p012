@@ -1,0 +1,70 @@
+{
+  "release_version": "2.2",
+  "team_id": "lsh26-t006",
+  "problem_id": "P12",
+  "repository_name": "lsh26-t006-p012",
+  "live_url": "",
+  "demo_video_url_optional": "",
+  "event_start_code": "LSH26-8490-C900",
+  "repository_created_before_release": false,
+  "pre_event_materials": [],
+  "sample_data": {
+    "loads_published_fixture": true,
+    "method": "file upload",
+    "reset_instructions": "Use the reset button in the settings page to clear all data and reload sample fixtures"
+  },
+  "problem_solving_method": "We chose a simple, straightforward approach using HTML, CSS, JavaScript, and Python to ensure rapid development and ease of deployment. This stack allowed us to quickly implement all four requirements including OCR receipt scanning, monthly dashboard analytics, AI-powered forecasting and insights, and savings pocket management with DPS calculations. The simplicity of the tech stack made it easier to build, test, and debug within the event timeframe.",
+  "requirements": {
+    "R1": {"status": "complete", "evidence": "/add-expense-ocr - OCR receipt upload with amount, date, and shop name extraction with user verification"},
+    "R2": {"status": "complete", "evidence": "/dashboard - Monthly dashboard showing total spent vs salary, category breakdown, largest expenses, and month-over-month comparison"},
+    "R3": {"status": "complete", "evidence": "/dashboard - AI-powered forecast showing expected spending, money left/short at month end, and three specific category-based insights"},
+    "R4": {"status": "complete", "evidence": "/savings - Savings pockets with name, target amount, monthly contribution, expected completion date based on forecast, and DPS return calculations"}
+  },
+  "team_members": [
+    {
+      "registered_name": "shanid",
+      "github_username": "Perashanid",
+      "major_contribution": "Complete implementation of Problem 12 - Personal Ledger Manager including all four requirements, frontend and backend development, OCR integration, dashboard analytics, AI forecasting, and savings management",
+      "evidence_paths_or_commits": ["src/", "server.js", "seed-db.js", "src/pages/", "src/components/"]
+    },
+    {
+      "registered_name": "alimostafa",
+      "github_username": "AliMostafa12345",
+      "major_contribution": "Problem 12 development - collaboration on code development, testing, and integration",
+      "evidence_paths_or_commits": ["src/", "server.js"]
+    }
+  ],
+  "major_design_decisions": [
+    "Used React with TypeScript for type-safe frontend development",
+    "Implemented shadcn/ui component library for consistent, accessible UI components",
+    "Used SQLite database for lightweight, file-based data persistence",
+    "Integrated Tesseract.js for client-side OCR processing of receipts",
+    "Implemented OpenAI GPT-4 for generating personalized financial insights and forecasts",
+    "Used Recharts library for interactive data visualizations on the dashboard",
+    "Created a simple Express.js backend for API endpoints and database operations"
+  ],
+  "known_limitations": [
+    "OCR accuracy depends on receipt image quality and clarity",
+    "Forecast calculations are based on current month data and may not account for seasonal variations",
+    "DPS calculations use a fixed interest rate assumption"
+  ],
+  "ai_tools_used": [
+    {
+      "tool": "ChatGPT",
+      "used_for": "Generating design mockups, planning application infrastructure, and architectural decisions",
+      "how_output_was_verified": "Manual review of design proposals and architectural patterns against project requirements"
+    },
+    {
+      "tool": "Claude",
+      "used_for": "Code generation for components, backend APIs, database schemas, and business logic implementation",
+      "how_output_was_verified": "Manual testing of all generated code, running the application, and verifying functionality against requirements"
+    },
+    {
+      "tool": "GitHub Copilot",
+      "used_for": "Code completion, boilerplate generation, and assembling components in VS Code",
+      "how_output_was_verified": "Line-by-line review in VS Code editor and functional testing of integrated code"
+    }
+  ],
+  "licenses_file": "LICENSES.md",
+  "declaration": "The information above is complete and truthful to the best of the team's knowledge."
+}

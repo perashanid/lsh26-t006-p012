@@ -44,7 +44,7 @@ const AddSavings = () => {
 
     if (!formData.name.trim()) newErrors.name = "Name is required";
     if (!formData.item.trim()) newErrors.item = "Item description is required";
-    
+
     if (!formData.targetAmount.trim()) {
       newErrors.targetAmount = "Target amount is required";
     } else if (isNaN(Number(formData.targetAmount)) || Number(formData.targetAmount) <= 0) {
@@ -71,8 +71,8 @@ const AddSavings = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
-      
-      <div className="container mx-auto px-4 py-8">
+
+      <div className="container mx-auto px-4 py-8 pt-24">
         <div className="max-w-2xl mx-auto">
           {/* Header */}
           <div className="mb-6">

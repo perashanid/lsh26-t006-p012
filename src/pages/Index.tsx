@@ -10,9 +10,6 @@ const Index = () => {
     <div className="min-h-screen overflow-x-hidden">
       <Navigation />
       <Hero />
-      <Locations />
-      <Experience />
-      <Booking />
       <Footer />
     </div>
   );

@@ -131,10 +131,10 @@ const AddExpenseOCR = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       <Navigation />
       
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 lg:px-8 pt-24 pb-12">
         <div className="max-w-2xl mx-auto">
           {/* Header */}
           <div className="mb-6">

@@ -49,7 +49,7 @@ const Savings = () => {
     return (
       <div className="min-h-screen bg-gray-50">
         <Navigation />
-        <div className="container mx-auto px-4 py-16">
+        <div className="container mx-auto px-4 py-16 pt-24">
           <div className="text-center">Loading savings pockets...</div>
         </div>
         <Footer />
@@ -60,8 +60,8 @@ const Savings = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
-      
-      <div className="container mx-auto px-4 py-8">
+
+      <div className="container mx-auto px-4 py-8 pt-24">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
@@ -102,7 +102,7 @@ const Savings = () => {
               const progressPercentage = (pocket.currentSaved / pocket.targetAmount) * 100;
               const monthsToComplete = Math.ceil(remaining / pocket.monthlyContribution);
               const dpsReturn = calculateDPS(pocket.monthlyContribution, monthsToComplete, DPS_RATE);
-              
+
               // Calculate completion date
               const completionDate = new Date("2026-04-18");
               completionDate.setMonth(completionDate.getMonth() + monthsToComplete);

@@ -1,16 +1,11 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, TreePine } from "lucide-react";
-import heroImage from "@/assets/hero-camping.jpg";
-import forestImage from "@/assets/spot-forest.jpg";
-import lakeImage from "@/assets/spot-lake.jpg";
-import meadowImage from "@/assets/spot-meadow.jpg";
+import { ArrowRight, BookOpen } from "lucide-react";
 
 const slides = [
-  { image: heroImage, alt: "Off-grid camping in nature" },
-  { image: forestImage, alt: "Forest camping spot" },
-  { image: lakeImage, alt: "Lakeside retreat" },
-  { image: meadowImage, alt: "Meadow camping experience" },
+  { image: "/ledger-hero.jpg", alt: "Accounting ledger book" },
+  { image: "/ledger-1.jpg", alt: "Financial tracking" },
+  { image: "/ledger-2.jpg", alt: "Personal finance management" },
 ];
 
 const SLIDE_DURATION = 5000;
@@ -66,14 +61,14 @@ const Hero = () => {
 
       {/* Bottom-Left Text Content */}
       <div className="absolute bottom-20 left-6 md:left-12 lg:left-16 z-10 text-white">
-        {/* Tree Icon */}
+        {/* Book Icon */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
           className="mb-4"
         >
-          <TreePine className="w-6 h-6 text-white stroke-[1.5]" />
+          <BookOpen className="w-6 h-6 text-white stroke-[1.5]" />
         </motion.div>
 
         {/* Headline */}
@@ -83,19 +78,29 @@ const Hero = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight max-w-md text-left flex flex-col"
         >
-          <span>Disconnect</span>
-          <span>to Reconnect</span>
+          <span>Your Personal</span>
+          <span>Finance Manager</span>
         </motion.h1>
+
+        {/* Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+          className="mt-4 text-white/90 text-sm md:text-base max-w-md"
+        >
+          Track expenses, manage savings, and gain insights into your spending habits
+        </motion.p>
 
         {/* CTA Button */}
         <motion.button
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => window.location.href = '/dashboard'}
           className="mt-6 flex items-center gap-3 bg-white text-foreground px-6 py-3 rounded-full text-sm tracking-wide hover:bg-white/90 transition-colors"
         >
-          Book Now
+          Get Started
           <ArrowRight className="w-4 h-4" />
         </motion.button>
       </div>
