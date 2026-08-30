@@ -1,6 +1,7 @@
 // API client for backend communication
 
-const API_URL = 'http://localhost:3001/api';
+// Use relative /api for Vercel deployment, or localhost for local dev
+const API_URL = import.meta.env.PROD ? '/api' : 'http://localhost:3001/api';
 
 async function fetchAPI(endpoint: string, options: RequestInit = {}) {
   const response = await fetch(`${API_URL}${endpoint}`, {
