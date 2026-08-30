@@ -15,13 +15,21 @@ interface GeminiReceiptData {
   paymentMethod?: string | null;
 }
 
-const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || 'AIzaSyAb8RN6LKJsvwx5QoAT_owz0hSPS5NPvx2tUmResiu5hXxqlIUQ';
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const GEMINI_MODEL = 'gemini-1.5-flash';
+
+if (!GEMINI_API_KEY) {
+  console.error('VITE_GEMINI_API_KEY is not set in environment variables');
+}
 
 /**
  * Extract receipt data using Gemini API
  */
 export async function extractReceiptData(imageFile: File): Promise<OCRExtraction> {
+  if (!GEMINI_API_KEY) {
+    throw new Error('Gemini API key is not configured. Please set VITE_GEMINI_API_KEY in your environment variables.');
+  }
+
   try {
     // Convert image to base64
     const base64Image = await fileToBase64(imageFile);
