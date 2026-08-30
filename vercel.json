@@ -5,8 +5,5 @@
       "source": "/api/:path*",
       "destination": "/api/:path*"
     }
-  ],
-  "env": {
-    "MONGODB_URI": "@mongodb_uri"
-  }
+  ]
 }
