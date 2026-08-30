@@ -15,7 +15,7 @@ interface GeminiReceiptData {
   paymentMethod?: string | null;
 }
 
-const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || 'AIzaSyAb8RN6LKJsvwx5QoAT_owz0hSPS5NPvx2tUmResiu5hXxqlIUQ';
 const GEMINI_MODEL = 'gemini-1.5-flash';
 
 if (!GEMINI_API_KEY) {
